@@ -1,0 +1,24 @@
+1- Creez un network docker avec la commande "docker network create NOM_DE_RESEAU"
+
+2- Dockerisez l'application nodejs en y ajoutant un fichier Dockerfile à la racine
+
+3- Utilisez l'instruction "ENTRYPOINT" dans votre Dockerfile. Placez ENTRYPOINT avant l'instruction CMD.
+L'instruction ENTRYPOINT permet de définir le programme ou le script qui sera exécuté au démarrage du conteneur. 
+Ici il s'agit d'executer les instructions contenues dans le script entrypoint.sh avant que le conteneur ne démarre.
+
+4- Démarrez un conteneur avec l'image mysql:8.0 tout l'ajoutant dans le network précedement créer.
+
+5- Démarrez un conteneur avec l'image construite à partir de votre fichier Dockerfile. Le nom du conteneur doit être "users-app". Ajoutez votre conteneur users-app dans le network précedemment creer avec l'option "--network NOM_DE_RESEAU"
+
+6- Ajoutez un fichier .gitlab-ci.yml à la racine de votre projet. Ajoutez y les jobs "docker_image_build" et "deploy" standard à un projet nodejs.
+
+7- Créez un repo gitlab et nommez le users-app-tp-goupe{numéro_de_votre_groupe}-al-ia
+
+Exemple: users-app-tp-goupe10-al-ia
+
+Poussez votre projet sur la branche "develop". La branche "main" doit absolument restez vide.
+
+Les commits doivent être fait au moins par 2 auteurs différents du même groupe de TP.
+
+Pour soumettre votre travail, invitez le user "oseequenum" sur votre projet Gitlab.
+
