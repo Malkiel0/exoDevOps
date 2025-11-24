@@ -7,6 +7,7 @@ export async function getUsers() {
     const data = await User.findAll();
     return responseHandler(true, data);
   } catch (error) {
+    console.error('Unable to get the users:', error);
     throw new Error('Unable to get the users');
   }
 }
